@@ -1,3 +1,17 @@
 https://ssh.cloud.google.com/cloudshell/editor?shellonly=true
 PS1="\w$ "
 http://www.academia-online.org/linux/ext/ex1/ext2.pdf
+https://en.wikipedia.org/wiki/Master_boot_record
+https://en.wikipedia.org/wiki/Linux_startup_process
+https://en.wikipedia.org/wiki/Fork_(system_call)
+https://en.wikipedia.org/wiki/Virtual_memory
+which systemd
+https://en.wikipedia.org/wiki/Page_fault
+https://en.wikipedia.org/wiki/Fork_bomb
+whereis cron
+https://en.wikipedia.org/wiki/Thread_(computing)
+https://en.wikipedia.org/wiki/Thread_safety
+select-editor
+crontab -l
+crontab -e
+top -b -n1
