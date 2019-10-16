@@ -33,3 +33,5 @@ sudo chmod +x /usr/local/sbin/*.sh
 sudo crontab -e
 * * * * * /usr/local/sbin/monitor.sh
 sudo crontab -l
+sudo bash
+PS1="\w# "
