@@ -16,3 +16,10 @@ crontab -l
 crontab -e
 top -b -n1
 http://www.academia-online.org/linux/ext/ex1
+https://en.wikipedia.org/wiki/Inode
+vmstat
+sysctl vm.swappiness
+https://en.wikipedia.org/wiki/Vmstat
+https://en.wikipedia.org/wiki/Cron
+https://en.wikipedia.org/wiki/Sysctl
+https://en.wikipedia.org/wiki/Paging
