@@ -23,3 +23,13 @@ https://en.wikipedia.org/wiki/Vmstat
 https://en.wikipedia.org/wiki/Cron
 https://en.wikipedia.org/wiki/Sysctl
 https://en.wikipedia.org/wiki/Paging
+https://en.wikipedia.org/wiki/Out_of_memory
+git clone https://github.com/secobau/lpic2 && cd lpic2 && sudo cp -rv usr /
+apt-cache search mail | awk ' { print $1 } ' | sort | less
+sudo apt-get install -y bsd-mailx
+https://en.wikipedia.org/wiki/Ps_(Unix)
+git pull && sudo cp -rv usr /
+sudo chmod +x /usr/local/sbin/*.sh
+sudo crontab -e
+* * * * * /usr/local/sbin/monitor.sh
+sudo crontab -l
