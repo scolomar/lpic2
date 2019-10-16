@@ -9,7 +9,7 @@ inodes_min=100000
 
 # Google cloud shell
 forks=$( vmstat --forks | awk ' { print $1 } ' )
-pcpu=$( ps -e -o pcpu | sort | tail -n 2 | head -n 1 | awk ' { print $1 } ' )
+pcpu=$( ps -e -o pcpu | sort | tail -n 2 | head -n 1 | awk ' { print $1 } ' | cut --delimiter . --fields 1 )
 mem=$( free | awk ' /Mem/{ print $7 } ' )
 blocks=$( df | awk ' /home/{ print $4 } ' )
 inodes=$( df --inodes | awk ' /home/{ print $4 } ' )
