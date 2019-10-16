@@ -15,3 +15,4 @@ select-editor
 crontab -l
 crontab -e
 top -b -n1
+http://www.academia-online.org/linux/ext/ex1
