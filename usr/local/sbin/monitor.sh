@@ -1,10 +1,12 @@
-#!/bin/sh
+#!/bin/sh -x
 set -e
+
 forks_max=900000
 cpu_max=99
-mem_min=1000000
+mem_min=100000
 blocks_min=1000000
 inodes_min=100000
+
 forks=$( vmstat -s | grep forks |awk -F' ' '{print $1}')
 cpu=$(ps -e -o pcpu|sort|tail -2|head -1|cut -d. -f1|cut -d' ' -f2)
 mem=$(free|grep cache:|awk '{print $4}')
