@@ -35,3 +35,24 @@ sudo crontab -e
 sudo crontab -l
 sudo bash
 PS1="\w# "
+https://en.wikipedia.org/wiki/Password_strength
+openssl rand -base64 32 | tr --delete '/+=' | fold --width 22 | head -n 1
+https://en.wikipedia.org/wiki/Setuid
+https://en.wikipedia.org/wiki/Internet_protocol_suite
+cat /etc/hosts
+cat /etc/resolv.conf
+grep hosts /etc/nsswitch.conf
+echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+sudo chattr +i /etc/resolv.conf
+lsattr /etc/resolv.conf
+host -a upm.es
+host -a www.upm.es 209.244.0.3
+https://en.wikipedia.org/wiki/IPv4
+https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+https://en.wikipedia.org/wiki/Address_Resolution_Protocol
+arp
+sysctl net.ipv4.ip_forward
+https://en.wikipedia.org/wiki/Ethernet_frame
+https://en.wikipedia.org/wiki/EtherType
+sudo iptables --list-rules --table filter | grep --invert-match DOCKER | less
+sudo awk -F'SRC=' /DST=142.93.160.4/'{ print $2 }' /var/log/messages | cut --delimiter . --field 1,2,3 | sort | uniq --count | sort --numeric-sort 1> monitor.$( date +%F-%H%M )
