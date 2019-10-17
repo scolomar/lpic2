@@ -56,3 +56,10 @@ https://en.wikipedia.org/wiki/Ethernet_frame
 https://en.wikipedia.org/wiki/EtherType
 sudo iptables --list-rules --table filter | grep --invert-match DOCKER | less
 sudo awk --field-separator SRC= /DST=142.93.160.4/'{ print $2 }' /var/log/messages | cut --delimiter . --field 1,2,3 | sort | uniq --count | sort --numeric-sort 1> monitor.$( date +%F-%H%M )
+sudo grep '172\.241\.' /var/log/messages
+sudo zcat /var/log/messages.4.gz | grep '142\.93\.' --max-count 1
+ip address | grep "inet.*lo$" | cut --delimiter / --field 1 | awk '{ print $2 }'
+ip address | grep "inet.*lo$" | cut --delimiter / --field 2 | awk '{ print $1 }'
+ip address | grep "inet.*eth0$" | cut --delimiter / --field 1 | awk '{ print $2 }'
+ip address | grep "inet.*eth0$" | cut --delimiter / --field 2 | awk '{ print $1 }'
+ipcalc  $ip/$cdr | awk /Network/'{ print $2 }'
