@@ -60,6 +60,6 @@ sudo grep '172\.241\.' /var/log/messages
 sudo zcat /var/log/messages.4.gz | grep '142\.93\.' --max-count 1
 ip address | grep "inet.*lo$" | cut --delimiter / --field 1 | awk '{ print $2 }'
 ip address | grep "inet.*lo$" | cut --delimiter / --field 2 | awk '{ print $1 }'
-ip address | grep "inet.*eth0$" | cut --delimiter / --field 1 | awk '{ print $2 }'
-ip address | grep "inet.*eth0$" | cut --delimiter / --field 2 | awk '{ print $1 }'
+ip=$(  ip address | grep "inet.*eth0$" | cut --delimiter / --field 1 | awk '{ print $2 }' )
+cdr=$( ip address | grep "inet.*eth0$" | cut --delimiter / --field 2 | awk '{ print $1 }' )
 ipcalc  $ip/$cdr | awk /Network/'{ print $2 }'
