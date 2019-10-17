@@ -14,9 +14,11 @@ vmstat_d_output=$( /usr/bin/vmstat --disk )
 vmstat_D_output=$( /usr/bin/vmstat --disk-sum )
 netstat_output=$( /bin/netstat -putana )
 
-/usr/bin/mail -s "Alarm for unit: $UNIT" $MAILTO <<EOF
-From:$MAILFROM
-To:$MAILTO
+#/usr/bin/mail -s "Alarm for unit: $UNIT" $MAILTO <<EOF
+#From:$MAILFROM
+#To:$MAILTO
+
+/bin/cat 1> alarm-log.$( date +%F_%Hh%Mm ) 0<< EOF
 
 Alarm for unit: $UNIT
 
