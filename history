@@ -63,3 +63,4 @@ ip address | grep "inet.*lo$" | cut --delimiter / --field 2 | awk '{ print $1 }'
 ip=$(  ip address | grep "inet.*eth0$" | cut --delimiter / --field 1 | awk '{ print $2 }' )
 cdr=$( ip address | grep "inet.*eth0$" | cut --delimiter / --field 2 | awk '{ print $1 }' )
 ipcalc  $ip/$cdr | awk /Network/'{ print $2 }'
+https://console.aws.amazon.com/
