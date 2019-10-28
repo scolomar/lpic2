@@ -64,3 +64,4 @@ ip=$(  ip address | grep "inet.*eth0$" | cut --delimiter / --field 1 | awk '{ pr
 cdr=$( ip address | grep "inet.*eth0$" | cut --delimiter / --field 2 | awk '{ print $1 }' )
 ipcalc  $ip/$cdr | awk /Network/'{ print $2 }'
 https://console.aws.amazon.com/
+touch /.autorelabel
