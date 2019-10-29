@@ -71,3 +71,22 @@ cat .ssh/authorized_keys
 https://www.ssh.com/ssh/tunneling/example
 ssh -L localhost:8080:www.upm.es:80  172.31.41.66
 ssh -L localhost:8443:www.upm.es:443 172.31.41.66
+sudo yum install -y elinks
+links kernel.org
+unxz linux-5.3.8.tar.xz
+tar xfv linux-5.3.8.tar
+cd linux-5.3.8
+du -sh
+du -sh --inodes
+sudo yum install -y flex
+dd if=/dev/zero of=ejemplo.disk count=10000
+mkfs ejemplo.disk
+sudo mount -o loop ejemplo.disk /media/
+lsblk -f
+tune2fs ejemplo.disk -l
+dd 0< /dev/zero 1> emergencia.swap count=10000
+mkswap emergencia.swap
+chmod 600 emergencia.swap
+sudo chown root. emergencia.swap
+sudo swapon emergencia.swap
+swapon --show
