@@ -65,3 +65,9 @@ cdr=$( ip address | grep "inet.*eth0$" | cut --delimiter / --field 2 | awk '{ pr
 ipcalc  $ip/$cdr | awk /Network/'{ print $2 }'
 https://console.aws.amazon.com/
 touch /.autorelabel
+ssh-keygen
+cat /home/ec2-user/.ssh/id_rsa.pub
+cat .ssh/authorized_keys
+https://www.ssh.com/ssh/tunneling/example
+ssh -L localhost:8080:www.upm.es:80  172.31.41.66
+ssh -L localhost:8443:www.upm.es:443 172.31.41.66
