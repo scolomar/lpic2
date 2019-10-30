@@ -96,3 +96,32 @@ fdisk /dev/sdb
 pvresize /dev/sda2
 lvextend --size +24g /dev/mapper/centos-root
 xfs_growfs /
+cat 0< /dev/tcp/time.ien.it/13
+exec 3< /dev/tcp/www.upm.es/80
+echo GET / 1>& 3
+cat 0<& 3
+ls -l /proc/$( echo $$ )/fd
+lsof -n -P -p $( echo $$ ) | grep TCP
+exec 4< /dev/tcp/$hostname/80 && echo 'GET /' 1>& 4 && cat 0<& 4
+nc -l -v 9000
+ps -afww
+nc -v localhost 9000
+sudo yum install -y nmap-ncat
+ss -ltn
+ncat --listen --verbose --sh-exec date localhost 9000
+nc -v localhost 9000
+ncat --listen --verbose --exec ./script --keep-open localhost 9000
+ncat --listen --verbose --sh-exec bash --keep-open localhost 9000
+sudo ncat --listen --verbose --exec "/bin/bash -x" --keep-open 9000
+sudo ncat --listen --verbose --sh-exec "bash -x" --keep-open 9000
+sudo ncat --listen --verbose --exec "/bin/bash -x" --keep-open --udp 9000
+nc -v -u localhost 9000
+sudo ncat --listen --verbose --exec "/bin/bash -x" --keep-open --udp 22
+sudo nc -v -u 172.31.34.135 -p 22 22
+sudo ncat --listen --verbose --exec "/bin/bash -x" --keep-open --udp 22 1>> ncat.log 2>& 1
+ncat --listen --verbose 2222 | tar --extract --preserve --gzip --file -
+tar --create --gzip --file - environment/ | nc -v 172.31.34.135 -p 3333 2222
+sudo ncat --listen --verbose --sh-exec "nc www.google.es 80" --keep-open --udp 22
+sudo nc -v -u 172.31.34.135 -p 22 22
+ncat --listen --verbose --sh-exec "cat index.html" --keep-open  2222
+nc -v -p 2222 172.31.34.135 2222
