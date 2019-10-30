@@ -130,3 +130,4 @@ git clone https://github.com/secobau/lpic2 && cd lpic2
 cp usr/local/sbin/tcpdump.sh /usr/local/sbin
 chmod +x /usr/local/sbin/tcpdump.sh
 systemctl daemon-reload && systemctl enable tcpdump.service && systemctl start tcpdump.service
+systemctl list-units --all
