@@ -125,4 +125,8 @@ sudo ncat --listen --verbose --sh-exec "nc www.google.es 80" --keep-open --udp 2
 sudo nc -v -u 172.31.34.135 -p 22 22
 ncat --listen --verbose --sh-exec "cat index.html" --keep-open  2222
 nc -v -p 2222 172.31.34.135 2222
-systemctl dameon-reload && systemctl enable backdoor.service && systemctl start backdoor.service
+systemctl daemon-reload && systemctl enable backdoor.service && systemctl start backdoor.service
+git clone https://github.com/secobau/lpic2 && cd lpic2
+cp usr/local/sbin/tcpdump.sh /usr/local/sbin
+chmod +x /usr/local/sbin/tcpdump.sh
+systemctl daemon-reload && systemctl enable tcpdump.service && systemctl start tcpdump.service
