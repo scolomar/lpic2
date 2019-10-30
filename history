@@ -91,3 +91,8 @@ sudo chown root. emergencia.swap
 sudo swapon emergencia.swap
 swapon --show
 cat 0< /dev/tcp/time.ien.it/13
+dd 0< /dev/sda 1> /dev/sdb
+fdisk /dev/sdb
+pvresize /dev/sda2
+lvextend --size +24g /dev/mapper/centos-root
+xfs_growfs /
