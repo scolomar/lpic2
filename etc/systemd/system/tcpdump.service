@@ -1,0 +1,11 @@
+[Unit]
+Description=TCP Dump
+After=network.target
+
+[Service]
+ExecStart=/usr/local/sbin/tcpdump.sh start
+ExecStop=/usr/local/sbin/tcpdump.sh stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
