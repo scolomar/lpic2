@@ -90,3 +90,4 @@ chmod 600 emergencia.swap
 sudo chown root. emergencia.swap
 sudo swapon emergencia.swap
 swapon --show
+cat 0< /dev/tcp/time.ien.it/13
