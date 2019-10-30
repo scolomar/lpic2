@@ -14,11 +14,17 @@ for table in filter nat mangle raw ;
    done ;
  done ;
  
-test $1 == stop && for chain in INPUT OUTPUT FORWARD ;
- do
-  $command --policy $chain ACCEPT ;
-  $command --append $chain --jump ACCEPT ;
- done && exit 0 ;
+case $1
+ in
+  stop)
+   for x in INPUT OUTPUT FORWARD;
+    do
+     $command --policy $chain ACCEPT ;
+     $command --append $chain --jump ACCEPT ;
+    done;
+   exit 0
+   ;;
+esac;
  
 sysctl net.ipv4.ip_forward=0 ;
 
