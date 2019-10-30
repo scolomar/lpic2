@@ -3,7 +3,7 @@ set -e ;
 
 localnet=127.0.0.0/8 ;
 service_ports="22" ;
-service_proto="tcp" ;
+service_proto="tcp udp" ;
 command=/sbin/iptables ;
 
 for table in filter nat mangle raw ;
